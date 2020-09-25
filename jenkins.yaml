@@ -1,5 +1,5 @@
 jenkins:
-  systemMessage: 'Jenkins configured using CloudBees CI CasC - v2'
+  systemMessage: 'Jenkins configured using CloudBees CI CasC - v3'
 unclassified:
   hibernationConfiguration:
     activities:
@@ -54,8 +54,6 @@ kube:
           memory: false
           mountPath: "/var/maven/"
       yamlMergeStrategy: "override"
-groovy:
-  - url: https://raw.githubusercontent.com/emartinez-workshopedits/cloudbees-ci-config-bundle/master/groovy/create-pipeline-template-job.groovy
 credentials:
   system:
     domainCredentials:
@@ -72,3 +70,14 @@ credentials:
           id: "cloudbees-ci-workshop-github-app"
           owner: "emartinez-workshopedits"
           privateKey: "${gitHubAppPrivateKey}"
+cloudbees-slack-integration:
+  config:
+    slackToken: "${slackToken}"
+    slackWorkspace: "T010A455W77"
+    users:
+    - id: "EMartinez-demo"
+      jenkins: "EMartinez-demo"
+      optedIn: true
+      scmId: "EMartinez-demo"
+      slack: "emartinez@cloudbees.com"
+      slackWorkspace: "T010A455W77"
