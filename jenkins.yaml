@@ -79,5 +79,5 @@ cloudbees-slack-integration:
       jenkins: "EMartinez-demo"
       optedIn: true
       scmId: "EMartinez-demo"
-      slack: "REPLACE_USER_EMAIL"
+      slack: "emartinez@cloudbees.com"
       slackWorkspace: "T010A455W77"
